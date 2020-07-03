@@ -57,6 +57,11 @@ namespace CoreRestAPI.Controllers
             return new Employee();
         }
 
+        /// <summary>
+        /// Updates an Employee
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="employee"></param>
         // PUT: api/Employee/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Employee employee)
