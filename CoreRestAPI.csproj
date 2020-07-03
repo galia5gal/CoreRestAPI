@@ -20,5 +20,9 @@
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\CoreRestAPI.xml" />
+  </ItemGroup>
+
 
 </Project>

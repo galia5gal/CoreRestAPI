@@ -57,10 +57,7 @@ namespace CoreRestAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.  
             app.UseSwagger();
@@ -71,6 +68,15 @@ namespace CoreRestAPI
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseDefaultFiles();
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 
