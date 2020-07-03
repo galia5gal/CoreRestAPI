@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreRestAPI</name>
+    </assembly>
+    <members>
+        <member name="M:CoreRestAPI.Controllers.EmployeeController.Get">
+            <summary>
+            Gets the list of all Employees.
+            </summary>
+            <returns>The list of Employees.</returns>
+        </member>
+        <member name="M:CoreRestAPI.Controllers.EmployeeController.Post(CoreRestAPI.Models.Employee)">
+            <summary>
+            Creates an Employee.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/Employee
+                {        
+                  "firstName": "Galina",
+                  "lastName": "Aidemirska",
+                  "emailId": "galia5gal@gmail.com"        
+                }
+            </remarks>
+            <param name="employee"></param>  
+            <returns>A newly created employee</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="400">If the item is null</response>  
+        </member>
+    </members>
+</doc>
